@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div data-bs-theme="light" style="margin:10px 10px 10px 10px;">
+    <h1 class="text-center my-3"><u>Add New Employee</u></h1><br>
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card bg-dark text-white">
+
+                    <div class="card-body">
+
+
+                        <form action="/add_emp/" method="POST">
+                            {% csrf_token  %}
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Enter Employee name" aria-describedby="emailHelp" name="emp_name">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">E-mail Address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Enter Employee E-mail Id" aria-describedby="emailHelp" name="emp_email">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Employee-Id</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Enter Employee-Id" aria-describedby="emailHelp" name="emp_id">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Phone No.</label>
+                                <input type="number" class="form-control" id="exampleInputEmail1"
+                                    placeholder="Enter Employee Phone No." aria-describedby="emailHelp" name="emp_phone_no">
+                            </div>
+
+                           
+
+
+                            <div class="mb-3 form-check">
+                                <label for="working" >Working</label>
+                                <input type="checkbox" id="working" class="form-check-input"
+                                      name="emp_workiing">
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Department</label>
+                                <input type="text" class="form-control" 
+                                    placeholder="Enter Employee Department" aria-describedby="emailHelp" name="emp_department">
+                            </div>
+
+                             <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Address</label>
+                                <input type="text" class="form-control" 
+                                    placeholder="Enter Employee Address" aria-describedby="emailHelp" name="emp_address">
+                            </div>
+
+
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

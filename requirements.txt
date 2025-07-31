@@ -2,4 +2,4 @@
 Django==5.2.4
 sqlparse==0.5.3
 tzdata==2025.2
-pip freeze > requirements.txt
+gunicorn==21.2.0
